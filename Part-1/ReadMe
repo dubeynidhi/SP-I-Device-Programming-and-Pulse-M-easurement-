@@ -2,14 +2,13 @@ REPOSITORY CONTENTS:
 
 -> README 
 -> main.c(test program)
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 ABOUT: 
 
 This is two develop an user application with two threads to enable a distance-controlled animation.The devices that we have used in the assignment is a HC-SR04 ultrasonic sensor distance measuring
 module. To display an image, the ON/OFF (or intensity) data for all pixels is saved in a frame buffer and scanned in a fixed frame rate. We used a simple 8X8 LED matrix to display patterns. The device
 is equipped with a MAX7219 driver.
-	_______________________________________________________________________________________________________________________________________________________________________________________________________
+	_____________________________________________________________________________________________________________________________
 
 SYSTEM REQUIREMENTS:
 
@@ -18,16 +17,14 @@ SYSTEM REQUIREMENTS:
 -> SDK: iot-devkit-glibc-x86_64-image-full-i586-toolchain-1.7.2
 -> GCC: Minimum version of 4.8 is required to run -pthread option while compiling.
 -> Intel Galileo Gen2
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 SETUP:
 
 -> HC-SR04 and MAX7219 should be connected to the GPIO pins and the GND pin should be grounded properly by connecting to the GND of Galileo board. 
 -> Must boot Galileo from SD card with linux version 3.19.
 -> Set up the board using setup guide.
 
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 COMPILATION:
 
 -> type sudo screen /dev/ttyUSB0 115200 to communicate with board.
@@ -36,15 +33,13 @@ COMPILATION:
 -> Type make.
 -> Open a new terminal using scp copy your main.ko file and  main executable file to desired location on board.
 -> Now use ssh root@192.168.1.5 and navigate to the folder where the executable file is present.
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 EXECUTION:
 
 ->type ./main to run the code
-_______________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________
 
 EXPECTED OUTPUT:
 
 -> On running the executable, you move the object. The dog will run faster when the object comes forward and reverses its direction and slows down when the object is moved backwards. 
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
