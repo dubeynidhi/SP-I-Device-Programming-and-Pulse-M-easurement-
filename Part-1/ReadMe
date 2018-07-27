@@ -1,0 +1,50 @@
+REPOSITORY CONTENTS:
+
+-> README 
+-> main.c(test program)
+_______________________________________________________________________________________________________________________________________________________________________________________________________
+
+ABOUT: 
+
+This is two develop an user application with two threads to enable a distance-controlled animation.The devices that we have used in the assignment is a HC-SR04 ultrasonic sensor distance measuring
+module. To display an image, the ON/OFF (or intensity) data for all pixels is saved in a frame buffer and scanned in a fixed frame rate. We used a simple 8X8 LED matrix to display patterns. The device
+is equipped with a MAX7219 driver.
+	_______________________________________________________________________________________________________________________________________________________________________________________________________
+
+SYSTEM REQUIREMENTS:
+
+-> LED 
+-> LINUX KERNEL : Minimum version of 2.6.19 is expected.
+-> SDK: iot-devkit-glibc-x86_64-image-full-i586-toolchain-1.7.2
+-> GCC: Minimum version of 4.8 is required to run -pthread option while compiling.
+-> Intel Galileo Gen2
+_______________________________________________________________________________________________________________________________________________________________________________________________________
+
+SETUP:
+
+-> HC-SR04 and MAX7219 should be connected to the GPIO pins and the GND pin should be grounded properly by connecting to the GND of Galileo board. 
+-> Must boot Galileo from SD card with linux version 3.19.
+-> Set up the board using setup guide.
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________
+
+COMPILATION:
+
+-> type sudo screen /dev/ttyUSB0 115200 to communicate with board.
+-> type ifconfig enp0s20f6 192.168.1.5 netmask 255.255.0.0 up
+-> On the host, open directory in terminal in which files are present and compile library file. Type gcc led_ioctl.h.
+-> Type make.
+-> Open a new terminal using scp copy your main.ko file and  main executable file to desired location on board.
+-> Now use ssh root@192.168.1.5 and navigate to the folder where the executable file is present.
+_______________________________________________________________________________________________________________________________________________________________________________________________________
+
+EXECUTION:
+
+->type ./main to run the code
+_______________________________________________________________________________________________________________________________________________________________________________________________________
+
+EXPECTED OUTPUT:
+
+-> On running the executable, you move the object. The dog will run faster when the object comes forward and reverses its direction and slows down when the object is moved backwards. 
+_______________________________________________________________________________________________________________________________________________________________________________________________________
+
