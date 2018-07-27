@@ -8,7 +8,7 @@ ABOUT:
 This is two develop an user application with two threads to enable a distance-controlled animation.The devices that we have used in the assignment is a HC-SR04 ultrasonic sensor distance measuring
 module. To display an image, the ON/OFF (or intensity) data for all pixels is saved in a frame buffer and scanned in a fixed frame rate. We used a simple 8X8 LED matrix to display patterns. The device
 is equipped with a MAX7219 driver.
-	_____________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________
 
 SYSTEM REQUIREMENTS:
 
