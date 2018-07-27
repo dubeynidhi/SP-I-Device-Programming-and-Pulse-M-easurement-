@@ -1,15 +1,3 @@
-NAME:
- 
-CSE438 Assignment3Part2
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
-AUTHORS: 
-
-(TEAM-21) 
-Balarupini Rajendran (1211383768)
-Nidhi Dubey(1213031246)
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
 REPOSITORY CONTENTS:
 
 -> sensor.c (Driver Program Source code for distance measurement)
@@ -18,13 +6,11 @@ REPOSITORY CONTENTS:
 -> README 
 -> main.c(test program)
 
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 ABOUT: 
 
 This project demonstrates the Distance measurement using an Ultrasonic sensor and displaying patterns according to the distance measured in a spi LED matrix display. Here the distance measurement is taken care by the device driver(sensor) and the display is controlled by the device driver - DispDriver. The animation changes according to the distance of the object from the sensor.
-
-	_______________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________
 
 SYSTEM REQUIREMENTS:
 
@@ -34,17 +20,13 @@ SYSTEM REQUIREMENTS:
 -> SDK: iot-devkit-glibc-x86_64-image-full-i586-toolchain-1.7.2
 -> GCC: Minimum version of 4.8 is required to run -pthread option while compiling.
 -> Intel Galileo Gen2
-
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 SETUP:
 
 -> Ultrasonic sensor and display should be connected to the GPIO pins and the GND pin should be grounded properly by connecting to the GND of Galileo board
 -> Must boot Galileo from SD card with linux version 3.19.
 -> Set up the board using setup guide.
-
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 COMPILATION:
 
 -> type sudo screen /dev/ttyUSB0 115200 to communicate with board.
@@ -53,19 +35,16 @@ COMPILATION:
 -> Type make.
 -> Open a new terminal using scp copy your sernor.ko, DispDriver.ko file, mainsp executable file to desired location on board.
 -> Now use ssh root@192.168.1.5 and navigate to the folder where the executable file is present.
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 EXECUTION:
 
 C program-
 -> remove the existing spidev module using the rmmod command
 ->type insmod sensor.ko and next ins mod DispDriver.ko to insert the module
 ->type ./mainsp to run the code
-
-_______________________________________________________________________________________________________________________________________________________________________________________________________
-
+_____________________________________________________________________________________________________________________________
 EXPECTED OUTPUT:
 
 -> On running the executable, you will see the patterns on the spa display.
 -> You can bring the object near or move away from the sensor and you can notice the change in the patterns displayed
-_______________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________
