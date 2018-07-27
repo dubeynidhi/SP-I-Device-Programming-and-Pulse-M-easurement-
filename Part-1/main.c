@@ -514,20 +514,20 @@ void delay_and_dir(double dist ){
 }
 /*This is the thread body fuction to determine the distance by using the time delay obtained by the ultrasonic sensor*/
 void* US_distance_meas(void* arg){
-	int ret;
-	int timeout = 2000;
-	double ts_rise_e=0; // rising edge time
+    int ret;
+    int timeout = 2000;
+    double ts_rise_e=0; // rising edge time
     double ts_fall_e=0; // falling edge time
     long diff;
-	struct pollfd edge_poll;
-	char* buff[64];
+    struct pollfd edge_poll;
+    char* buff[64];
 
     /*  Opening trigger and echo pins of the ultrasonic sensor  */
     fd14 = open("/sys/class/gpio/gpio14/direction", O_WRONLY);
-	if (fd14 < 0)
-		printf("\n gpio14 direction file could not be opened");
-	if (0> write(fd14,"in",2))
-		printf(" \n in direction writing error fd14");
+    if (fd14 < 0)
+	printf("\n gpio14 direction file could not be opened");
+    if (0> write(fd14,"in",2))
+	printf(" \n in direction writing error fd14");
     fd14_val = open("/sys/class/gpio/gpio14/value", O_RDWR);
     if (fd14_val<0)
 	   printf("\n gpio14 value file could not be opened");
